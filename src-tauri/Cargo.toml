@@ -1,0 +1,26 @@
+[package]
+name = "nihongo-cards"
+version = "0.1.0"
+description = "Personalna aplikacja do fiszek z japońskiego"
+authors = ["you"]
+edition = "2021"
+rust-version = "1.77.2"
+
+# Nazwa biblioteki używana przez mobilne cele Tauri; bez znaczenia na desktopie.
+[lib]
+name = "nihongo_cards_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-sql = { version = "2", features = ["sqlite"] }
+tauri-plugin-http = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+# Domyślnie Tauri używa custom-protocol w buildzie produkcyjnym.
+custom-protocol = ["tauri/custom-protocol"]

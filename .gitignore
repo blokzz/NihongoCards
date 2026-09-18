@@ -1,0 +1,40 @@
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Vite / TS
+.vite/
+*.tsbuildinfo
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/gen/
+
+# Bazy danych (lokalne dane użytkownika)
+*.db
+*.db-wal
+*.db-shm
+
+# Python (mcp-server)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+*.md
+!README.md
+!docs/ARCHITECTURE.md
+!docs/ROADMAP.md
+!docs/analyze-word-contract.md
+!docs/schema.sql
+.claude
+*.log
+decks
